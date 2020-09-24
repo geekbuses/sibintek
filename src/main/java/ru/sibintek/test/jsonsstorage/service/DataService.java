@@ -12,5 +12,4 @@ public interface DataService {
 
     List<Storage> getAll();
 
-//    List<Storage> getById(String value);
 }
