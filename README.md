@@ -1,1 +1,1 @@
-адрес документация : http://localhost:8080/swagger-ui.html
+адрес документации : http://localhost:8080/swagger-ui.html
