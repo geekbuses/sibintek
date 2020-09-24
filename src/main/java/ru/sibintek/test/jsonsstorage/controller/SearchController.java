@@ -28,13 +28,13 @@ public class SearchController {
 
     @GetMapping
     @ApiOperation("Метод поиска по ключу")
-    public List<Storage> search(@ApiParam("Параметр в виде ключа") @RequestParam(name = "key", required = false, defaultValue = "id") String key) {
+    public List<Storage> search(@ApiParam(value = "Параметр в виде ключа", example = "http://localhost:8080/search?key=${key}") @RequestParam(name = "key", required = false, defaultValue = "id") String key) {
         return searchService.searchByKey(key);
     }
 
     @GetMapping("by_id")
     @ApiOperation("Метод поиска по значению id")
-    public List<Storage> searchById(@ApiParam("Значения id") @RequestParam(name = "value") String value) {
+    public List<Storage> searchById(@ApiParam(value = "Значения id",example = "http://localhost:8080/search?value=${value}") @RequestParam(name = "value") String value) {
         return searchService.getById(value);
     }
 }
